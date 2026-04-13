@@ -1,0 +1,36 @@
+{
+  "id": "M02-03",
+  "chapter": "Chapter 2: Editing Power Moves",
+  "order": 3,
+  "title": "Visual Selections",
+  "brief": "Use visual mode to replace short phrases and line chunks.",
+  "objectives": [
+    "Update two TODO lines in notes.md.",
+    "Replace alpha draft and beta draft with final statuses.",
+    "Save and check."
+  ],
+  "start_file": "notes.md",
+  "tips_file": "TIPS.md",
+  "checks": [
+    {
+      "type": "file_contains",
+      "path": "notes.md",
+      "value": "- [x] alpha ready"
+    },
+    {
+      "type": "file_contains",
+      "path": "notes.md",
+      "value": "- [x] beta shipped"
+    },
+    {
+      "type": "file_not_contains",
+      "path": "notes.md",
+      "value": "TODO alpha draft"
+    },
+    {
+      "type": "file_not_contains",
+      "path": "notes.md",
+      "value": "TODO beta draft"
+    }
+  ]
+}

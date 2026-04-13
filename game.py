@@ -19,6 +19,8 @@ STATE_ROOT = ROOT / ".dojo"
 SANDBOX_ROOT = STATE_ROOT / "sandboxes"
 STATE_FILE = STATE_ROOT / "state.json"
 PROGRESS_FILE = STATE_ROOT / "progress.json"
+GLOBAL_TIPS_FILE = ROOT / "GLOBAL_TIPS.md"
+GLOBAL_TIPS_SHORT_FILE = ROOT / "GLOBAL_TIPS_SHORT.md"
 
 
 @dataclass
@@ -210,8 +212,6 @@ def write_commands_file(mission: Mission, sandbox: Path) -> None:
             "- ./stage quit",
         ]
     )
-    if mission.tips_file:
-        lines.extend(["", f"Open tips in nvim: :e {mission.tips_file}"])
     (sandbox / "COMMANDS.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
@@ -224,6 +224,10 @@ def setup_workspace(mission: Mission) -> Path:
 
     workspace = sandbox / "workspace"
     workspace.mkdir(parents=True, exist_ok=True)
+    if GLOBAL_TIPS_FILE.exists():
+        shutil.copy2(GLOBAL_TIPS_FILE, sandbox / "GLOBAL_TIPS.md")
+    if GLOBAL_TIPS_SHORT_FILE.exists():
+        shutil.copy2(GLOBAL_TIPS_SHORT_FILE, sandbox / "GLOBAL_TIPS_SHORT.md")
     write_stage_control_script(sandbox)
     write_workspace_stage_script(workspace)
     write_commands_file(mission, sandbox)
@@ -283,7 +287,7 @@ def create_tmux_stage_session(session_name: str, sandbox: Path, start_file: str)
             session_name,
             "-c",
             str(sandbox),
-            "sh -lc 'clear; cat COMMANDS.md; if [ -f TIPS.md ]; then printf \"\\n\"; cat TIPS.md; fi; printf \"\\n\"; exec ${SHELL:-/bin/zsh}'",
+            "sh -lc 'clear; printf \"CURRENT MISSION\\n===============\\n\"; cat COMMANDS.md; if [ -f TIPS.md ]; then printf \"\\nMISSION-SPECIFIC TIPS\\n=====================\\n\"; cat TIPS.md; fi; if [ -f GLOBAL_TIPS_SHORT.md ]; then printf \"\\n\"; cat GLOBAL_TIPS_SHORT.md; fi; printf \"\\n\"; exec ${SHELL:-/bin/zsh}'",
         ],
         check=True,
     )

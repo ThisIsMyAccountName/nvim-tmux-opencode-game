@@ -1,0 +1,25 @@
+{
+  "id": "M02-05",
+  "chapter": "Chapter 2: Editing Power Moves",
+  "order": 5,
+  "title": "Substitute Precision",
+  "brief": "Use substitution commands for fast and controlled replacements.",
+  "objectives": [
+    "Replace all TODO with DONE in changelog.md.",
+    "Save and check."
+  ],
+  "start_file": "changelog.md",
+  "tips_file": "TIPS.md",
+  "checks": [
+    {
+      "type": "file_not_contains",
+      "path": "changelog.md",
+      "value": "TODO"
+    },
+    {
+      "type": "file_contains",
+      "path": "changelog.md",
+      "value": "DONE: update docs"
+    }
+  ]
+}

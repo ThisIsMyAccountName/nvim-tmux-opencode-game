@@ -11,37 +11,6 @@
   ],
   "start_file": "checklist.md",
   "tips_file": "TIPS.md",
-  "hints": [
-    "Open with nvim workspace/checklist.md.",
-    "Change [ ] to [x] on the first two checklist lines.",
-    "Search for stamp using /stamp, then use ciw on mission_two_pending.",
-    "Save with :w, then run ./stage check."
-  ],
-  "primary_path": [
-    "Open `nvim workspace/checklist.md`.",
-    "Move to each checklist line and replace one bracket space with `x` using `r`.",
-    "Jump to stamp with `/stamp`, then use `ciw` to set `mission_two_done`.",
-    "Save with `:w`, then run `./stage check`."
-  ],
-  "fallback_path": [
-    "Use `cw` instead of `ciw` if that feels easier.",
-    "If edits get messy, run `./stage reset` and retry the same sequence."
-  ],
-  "why_path": "Character replace (`r`) is fastest for checkbox toggles, and `ciw` is reliable for changing one status token.",
-  "nvim_reference": [
-    "move lines: `j` and `k`",
-    "replace one character: `r`",
-    "change full word: `ciw`",
-    "fallback change word: `cw`",
-    "search stamp line: `/stamp`",
-    "save file: `:w`"
-  ],
-  "tmux_reference": [
-    "switch pane: `Ctrl-b` then arrow keys",
-    "detach session: `Ctrl-b d`",
-    "exit stage session: `./stage quit`"
-  ],
-  "pro_move": "Use n to jump through repeated patterns after a search.",
   "checks": [
     {
       "type": "file_contains",

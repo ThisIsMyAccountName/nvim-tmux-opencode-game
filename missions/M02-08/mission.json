@@ -1,0 +1,21 @@
+{
+  "id": "M02-08",
+  "chapter": "Chapter 2: Editing Power Moves",
+  "order": 8,
+  "title": "Args Across Files",
+  "brief": "Use argument list workflow to rename across multiple files.",
+  "objectives": [
+    "Rename FLAG_OFF to FLAG_DISABLED in src files.",
+    "Run python3 test_flags.py and pass.",
+    "Save and check."
+  ],
+  "start_file": "src/a.py",
+  "tips_file": "TIPS.md",
+  "checks": [
+    {
+      "type": "command_exit_zero",
+      "path": ".",
+      "command": "python3 test_flags.py"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "id": "M02-02",
+  "chapter": "Chapter 2: Editing Power Moves",
+  "order": 2,
+  "title": "Quotes and Parentheses",
+  "brief": "Fix quoted text and function arguments with text objects.",
+  "objectives": [
+    "Edit app.py to correct string and argument values.",
+    "Set status to READY and retries to 5.",
+    "Save and check."
+  ],
+  "start_file": "app.py",
+  "tips_file": "TIPS.md",
+  "checks": [
+    {
+      "type": "file_contains",
+      "path": "app.py",
+      "value": "status = \"READY\""
+    },
+    {
+      "type": "file_contains",
+      "path": "app.py",
+      "value": "print(format_status(\"READY\", 5))"
+    },
+    {
+      "type": "file_not_contains",
+      "path": "app.py",
+      "value": "status = \"pending\""
+    },
+    {
+      "type": "file_not_contains",
+      "path": "app.py",
+      "value": "print(format_status(\"pending\", 1))"
+    }
+  ]
+}

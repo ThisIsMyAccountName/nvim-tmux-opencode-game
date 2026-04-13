@@ -10,34 +10,6 @@
   ],
   "start_file": "notes.md",
   "tips_file": "TIPS.md",
-  "hints": [
-    "Open with nvim workspace/notes.md.",
-    "Quick path: run :%s/FIXME/DONE/g then press Enter.",
-    "Manual path: /FIXME, then cgnDONE, press Esc, and repeat with n.",
-    "Save with :w and run ./stage check."
-  ],
-  "primary_path": [
-    "Open `nvim workspace/notes.md`.",
-    "Replace all markers in one step: `:%s/FIXME/DONE/g`.",
-    "Save with `:w`, then run `./stage check`."
-  ],
-  "fallback_path": [
-    "Use `/FIXME` then `cgnDONE` and `n` repeatedly until done.",
-    "Run `./stage check` to confirm zero `FIXME` remain."
-  ],
-  "why_path": "Global substitution is the fastest and safest fit for repeated identical tokens across the whole file.",
-  "nvim_reference": [
-    "replace all in file: `:%s/FIXME/DONE/g`",
-    "manual search: `/FIXME` then `n`",
-    "change current match: `cgn`",
-    "save file: `:w`"
-  ],
-  "tmux_reference": [
-    "switch pane: `Ctrl-b` then arrow keys",
-    "detach session: `Ctrl-b d`",
-    "exit stage session: `./stage quit`"
-  ],
-  "pro_move": "cgn + . can apply the same change rapidly across matches.",
   "checks": [
     {
       "type": "file_not_contains",

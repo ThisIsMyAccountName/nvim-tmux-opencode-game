@@ -12,34 +12,6 @@
   ],
   "start_file": "config.lua",
   "tips_file": "TIPS.md",
-  "hints": [
-    "Open with nvim workspace/config.lua.",
-    "Rename all tmp_path occurrences with :%s/tmp_path/project_root/g.",
-    "Delete the debug line with dd on print(\"debug\").",
-    "Save with :w and run ./stage check."
-  ],
-  "primary_path": [
-    "Open `nvim workspace/config.lua`.",
-    "Rename everywhere using `:%s/tmp_path/project_root/g`.",
-    "Delete debug line with `dd`, save `:w`, then `./stage check`."
-  ],
-  "fallback_path": [
-    "Search `/tmp_path` and change each hit with `ciw`.",
-    "If return line is wrong, fix it last and re-check."
-  ],
-  "why_path": "A scoped rename command is best here because the same token appears multiple times and must stay consistent.",
-  "nvim_reference": [
-    "search word: `/tmp_path`",
-    "replace all occurrences: `:%s/tmp_path/project_root/g`",
-    "delete line: `dd`",
-    "save file: `:w`"
-  ],
-  "tmux_reference": [
-    "switch pane: `Ctrl-b` then arrow keys",
-    "detach session: `Ctrl-b d`",
-    "exit stage session: `./stage quit`"
-  ],
-  "pro_move": "Search plus * is a fast way to walk identical words.",
   "checks": [
     {
       "type": "file_not_contains",

@@ -11,36 +11,6 @@
   ],
   "start_file": "events.log",
   "tips_file": "TIPS.md",
-  "hints": [
-    "Open with nvim workspace/events.log.",
-    "Search first hit: /ERROR.",
-    "Change match: cgnOK, then Esc.",
-    "Repeat with n and . until all hits are fixed, then :w and ./stage check."
-  ],
-  "primary_path": [
-    "Open `nvim workspace/events.log`.",
-    "Start with `/ERROR`, then `cgnOK` and `Esc`.",
-    "Use `n` then `.` repeatedly to apply the same change fast.",
-    "Save with `:w`, then run `./stage check`."
-  ],
-  "fallback_path": [
-    "Global substitute fallback: `:%s/ERROR/OK/g`.",
-    "If pattern is missed, use `N` to step back to previous match."
-  ],
-  "why_path": "`cgn` + repeat builds fast, precise multi-hit edits you can reuse in many real files.",
-  "nvim_reference": [
-    "search token: `/ERROR`",
-    "change current match: `cgn`",
-    "repeat last change: `.`",
-    "next/prev match: `n` / `N`",
-    "save file: `:w`"
-  ],
-  "tmux_reference": [
-    "switch pane: `Ctrl-b` then arrow keys",
-    "detach session: `Ctrl-b d`",
-    "exit stage session: `./stage quit`"
-  ],
-  "pro_move": "Any repeated local change becomes much faster once `.` is part of your muscle memory.",
   "checks": [
     {
       "type": "file_not_contains",

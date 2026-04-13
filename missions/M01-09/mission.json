@@ -11,37 +11,6 @@
   ],
   "start_file": "report.txt",
   "tips_file": "TIPS.md",
-  "hints": [
-    "Open with nvim workspace/report.txt.",
-    "Set mark on owner line: ma.",
-    "Jump to end with G and fix value token.",
-    "Jump back with `a and fix owner, save, then ./stage check."
-  ],
-  "primary_path": [
-    "Open `nvim workspace/report.txt`.",
-    "Place mark `a` on owner line with `ma`.",
-    "Jump to bottom using `G`, set `value: done`, then jump back with `` `a ``.",
-    "Set `owner: nvim-team`, save with `:w`, then run `./stage check`."
-  ],
-  "fallback_path": [
-    "Jump list fallback: `<C-o>` to go back and `<C-i>` to go forward.",
-    "Use `/owner` and `/value` searches if mark placement is missed."
-  ],
-  "why_path": "Marks let you bounce between distant edit points without rescanning the file.",
-  "nvim_reference": [
-    "set mark a: `ma`",
-    "jump to mark line: `'a`",
-    "jump to exact mark spot: `` `a ``",
-    "jump list back/forward: `<C-o>` / `<C-i>`",
-    "jump end/top: `G` / `gg`",
-    "save file: `:w`"
-  ],
-  "tmux_reference": [
-    "switch pane: `Ctrl-b` then arrow keys",
-    "detach session: `Ctrl-b d`",
-    "exit stage session: `./stage quit`"
-  ],
-  "pro_move": "Use marks for two-point edits, especially in longer files.",
   "checks": [
     {
       "type": "file_contains",

@@ -1,0 +1,36 @@
+{
+  "id": "M02-07",
+  "chapter": "Chapter 2: Editing Power Moves",
+  "order": 7,
+  "title": "Copy-Paste Replacements",
+  "brief": "Copy target words and paste them over wrong values across files.",
+  "objectives": [
+    "Use reference.txt to fix status.txt values.",
+    "Set role, mode, and state to READY values.",
+    "Save and check."
+  ],
+  "start_file": "status.txt",
+  "tips_file": "TIPS.md",
+  "checks": [
+    {
+      "type": "file_contains",
+      "path": "status.txt",
+      "value": "role: LEAD"
+    },
+    {
+      "type": "file_contains",
+      "path": "status.txt",
+      "value": "mode: ACTIVE"
+    },
+    {
+      "type": "file_contains",
+      "path": "status.txt",
+      "value": "state: READY"
+    },
+    {
+      "type": "file_not_contains",
+      "path": "status.txt",
+      "value": "role: guest"
+    }
+  ]
+}

@@ -11,34 +11,6 @@
   ],
   "start_file": "sequence.txt",
   "tips_file": "TIPS.md",
-  "hints": [
-    "Open with nvim workspace/sequence.txt.",
-    "Use dd to cut a line and p to paste it below the cursor.",
-    "Target order is exactly: first, second, third (one per line).",
-    "Use u to undo mistakes. If needed, run ./stage reset for a clean file."
-  ],
-  "primary_path": [
-    "Open `nvim workspace/sequence.txt`.",
-    "Use `dd` + `p` to move `third` below the correct lines until order is first/second/third.",
-    "Save with `:w`, then run `./stage check`."
-  ],
-  "fallback_path": [
-    "Undo with `u` whenever a line lands wrong.",
-    "If you lose track, run `./stage reset` and do one move at a time."
-  ],
-  "why_path": "This stage is line reordering, so linewise actions (`dd`/`p`) are more direct than character-level edits.",
-  "nvim_reference": [
-    "cut line: `dd`",
-    "paste below: `p`",
-    "undo: `u`",
-    "save file: `:w`"
-  ],
-  "tmux_reference": [
-    "switch pane: `Ctrl-b` then arrow keys",
-    "detach session: `Ctrl-b d`",
-    "exit stage session: `./stage quit`"
-  ],
-  "pro_move": "dd + p is your fastest basic line shuffling combo.",
   "checks": [
     {
       "type": "file_equals",

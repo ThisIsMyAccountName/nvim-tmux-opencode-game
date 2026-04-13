@@ -1,0 +1,31 @@
+{
+  "id": "M02-04",
+  "chapter": "Chapter 2: Editing Power Moves",
+  "order": 4,
+  "title": "Visual Block Columns",
+  "brief": "Use visual block mode to edit a column across many lines.",
+  "objectives": [
+    "Prefix each service line with prod-.",
+    "Keep the original names after the prefix.",
+    "Save and check."
+  ],
+  "start_file": "hosts.txt",
+  "tips_file": "TIPS.md",
+  "checks": [
+    {
+      "type": "file_contains",
+      "path": "hosts.txt",
+      "value": "prod-api-1"
+    },
+    {
+      "type": "file_contains",
+      "path": "hosts.txt",
+      "value": "prod-worker-2"
+    },
+    {
+      "type": "file_not_contains",
+      "path": "hosts.txt",
+      "value": "api-1\nworker-1"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": "M02-06",
+  "chapter": "Chapter 2: Editing Power Moves",
+  "order": 6,
+  "title": "Macro Drill",
+  "brief": "Record and replay a macro to apply repeated edits.",
+  "objectives": [
+    "Convert each item line in records.txt to include [ok].",
+    "Save and check."
+  ],
+  "start_file": "records.txt",
+  "tips_file": "TIPS.md",
+  "checks": [
+    {
+      "type": "file_contains",
+      "path": "records.txt",
+      "value": "item-01 [ok]"
+    },
+    {
+      "type": "file_contains",
+      "path": "records.txt",
+      "value": "item-06 [ok]"
+    },
+    {
+      "type": "file_not_contains",
+      "path": "records.txt",
+      "value": "item-01 pending"
+    }
+  ]
+}

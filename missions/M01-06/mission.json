@@ -1,7 +1,7 @@
 {
   "id": "M01-06",
   "chapter": "Chapter 1: Neovim Core Navigation",
-  "order": 6,
+  "order": 7,
   "title": "Buffer Hop",
   "brief": "Switch between buffers to copy target values into a status file.",
   "objectives": [
@@ -11,36 +11,6 @@
   ],
   "start_file": "status.txt",
   "tips_file": "TIPS.md",
-  "hints": [
-    "Open with nvim workspace/status.txt.",
-    "Open reference once with :e workspace/reference.txt.",
-    "Jump back with :b# and edit status.txt.",
-    "Save with :w and run ./stage check."
-  ],
-  "primary_path": [
-    "Open `nvim workspace/status.txt`.",
-    "Open reference with `:e workspace/reference.txt`, then jump back via `:b#`.",
-    "Update both tokens using `ciw`, save with `:w`, then run `./stage check`."
-  ],
-  "fallback_path": [
-    "Use `:ls` then `:b <num>` if you forget buffer names.",
-    "Split fallback: `:vsplit workspace/reference.txt` and compare side-by-side."
-  ],
-  "why_path": "Buffers keep context warm, so you can bounce between files quickly without rebuilding windows.",
-  "nvim_reference": [
-    "list buffers: `:ls`",
-    "toggle last buffer: `:b#`",
-    "next/prev buffer: `:bnext` / `:bprev`",
-    "open file in current buffer: `:e workspace/reference.txt`",
-    "change word: `ciw`",
-    "save file: `:w`"
-  ],
-  "tmux_reference": [
-    "switch pane: `Ctrl-b` then arrow keys",
-    "detach session: `Ctrl-b d`",
-    "exit stage session: `./stage quit`"
-  ],
-  "pro_move": "`:b#` is one of the fastest ways to compare two files repeatedly.",
   "checks": [
     {
       "type": "file_contains",

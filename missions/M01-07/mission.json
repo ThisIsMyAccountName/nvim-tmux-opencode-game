@@ -1,7 +1,7 @@
 {
   "id": "M01-07",
   "chapter": "Chapter 1: Neovim Core Navigation",
-  "order": 7,
+  "order": 8,
   "title": "Tab Relay",
   "brief": "Use tabs to inspect a spec file and patch a TODO list.",
   "objectives": [
@@ -11,36 +11,6 @@
   ],
   "start_file": "tasks.md",
   "tips_file": "TIPS.md",
-  "hints": [
-    "Open with nvim workspace/tasks.md.",
-    "Create a new tab for spec: :tabedit workspace/spec.md.",
-    "Switch tabs with gt and gT.",
-    "Save tasks.md and run ./stage check."
-  ],
-  "primary_path": [
-    "Open `nvim workspace/tasks.md`.",
-    "Open spec in a tab: `:tabedit workspace/spec.md`.",
-    "Use `gt`/`gT` to move between tabs and apply values in `tasks.md`.",
-    "Save with `:w`, then run `./stage check`."
-  ],
-  "fallback_path": [
-    "Buffer fallback: open with `:e workspace/spec.md` and return via `:b#`.",
-    "Split fallback: `:vsplit workspace/spec.md` if tabs feel slow."
-  ],
-  "why_path": "Tabs are a clean mental model for separate files while preserving focused editing state per tab.",
-  "nvim_reference": [
-    "open file in new tab: `:tabedit workspace/spec.md`",
-    "next/prev tab: `gt` / `gT`",
-    "close tab: `:tabclose`",
-    "change word: `ciw`",
-    "save file: `:w`"
-  ],
-  "tmux_reference": [
-    "switch pane: `Ctrl-b` then arrow keys",
-    "detach session: `Ctrl-b d`",
-    "exit stage session: `./stage quit`"
-  ],
-  "pro_move": "Tabs are handy when you want one context per file with minimal window juggling.",
   "checks": [
     {
       "type": "file_contains",

@@ -25,7 +25,7 @@ python3 game.py start M00-01
 `start` and `next` launch a tmux stage session with:
 
 - left pane: Neovim in mission workspace
-- right pane: shell showing `COMMANDS.md`
+- right pane: mission objective + mission tips + compact global quick tips
 
 When mission checks pass, move forward with:
 
@@ -69,6 +69,8 @@ Each stage is created under `.dojo/sandboxes/<MISSION_ID>/` and contains:
 
 - `workspace/` - editable mission files
 - `mission.json` - mission metadata copied from source
-- `TIPS.md` - mission tips, best path, and alternatives
+- `GLOBAL_TIPS.md` - full shared command glossary (open on demand)
+- `GLOBAL_TIPS_SHORT.md` - compact shared quick-reference shown in right pane
+- `TIPS.md` - mission-specific command tips
 - `COMMANDS.md` - minimal command reference for the stage
 - `stage` - helper script for `check`, `next`, and `quit`

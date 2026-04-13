@@ -1,0 +1,66 @@
+{
+  "id": "M02-01",
+  "chapter": "Chapter 2: Editing Power Moves",
+  "order": 1,
+  "title": "Text Objects Starter",
+  "brief": "Use word-focused edits to clean a terminology file.",
+  "objectives": [
+    "Fix misspelled terms in terms.txt.",
+    "Expected words include navigation, neovim, tmux, stable, and keyboard.",
+    "Save and check."
+  ],
+  "start_file": "terms.txt",
+  "tips_file": "TIPS.md",
+  "checks": [
+    {
+      "type": "file_contains",
+      "path": "terms.txt",
+      "value": "navigation"
+    },
+    {
+      "type": "file_contains",
+      "path": "terms.txt",
+      "value": "neovim"
+    },
+    {
+      "type": "file_contains",
+      "path": "terms.txt",
+      "value": "tmux"
+    },
+    {
+      "type": "file_contains",
+      "path": "terms.txt",
+      "value": "stable"
+    },
+    {
+      "type": "file_contains",
+      "path": "terms.txt",
+      "value": "keyboard"
+    },
+    {
+      "type": "file_not_contains",
+      "path": "terms.txt",
+      "value": "navgation"
+    },
+    {
+      "type": "file_not_contains",
+      "path": "terms.txt",
+      "value": "neovm"
+    },
+    {
+      "type": "file_not_contains",
+      "path": "terms.txt",
+      "value": "tmx"
+    },
+    {
+      "type": "file_not_contains",
+      "path": "terms.txt",
+      "value": "stabel"
+    },
+    {
+      "type": "file_not_contains",
+      "path": "terms.txt",
+      "value": "keybord"
+    }
+  ]
+}

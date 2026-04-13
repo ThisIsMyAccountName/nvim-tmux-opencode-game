@@ -1,0 +1,9 @@
+core words:
+- navgation
+- neovm
+- tmx
+- stabel
+- keybord
+
+practice line:
+navgation in neovm with tmx is stabel on keybord use

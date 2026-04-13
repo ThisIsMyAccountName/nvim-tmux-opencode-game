@@ -1,0 +1,21 @@
+{
+  "id": "M02-10",
+  "chapter": "Chapter 2: Editing Power Moves",
+  "order": 10,
+  "title": "Chapter 2 Checkpoint",
+  "brief": "Combine multi-file editing techniques to make tests pass.",
+  "objectives": [
+    "Fix naming and status formatting across app files.",
+    "Run python3 test_app.py and pass.",
+    "Save and check."
+  ],
+  "start_file": "app.py",
+  "tips_file": "TIPS.md",
+  "checks": [
+    {
+      "type": "command_exit_zero",
+      "path": ".",
+      "command": "python3 test_app.py"
+    }
+  ]
+}

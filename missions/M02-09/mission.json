@@ -1,0 +1,21 @@
+{
+  "id": "M02-09",
+  "chapter": "Chapter 2: Editing Power Moves",
+  "order": 9,
+  "title": "Quickfix Batch Fix",
+  "brief": "Use quickfix navigation to remove debug markers across files.",
+  "objectives": [
+    "Remove all DEBUG_ME markers from service files.",
+    "Run python3 test_service.py and pass.",
+    "Save and check."
+  ],
+  "start_file": "service/api.py",
+  "tips_file": "TIPS.md",
+  "checks": [
+    {
+      "type": "command_exit_zero",
+      "path": ".",
+      "command": "python3 test_service.py"
+    }
+  ]
+}
