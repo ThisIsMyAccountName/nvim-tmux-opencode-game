@@ -1,0 +1,67 @@
+{
+  "id": "M01-08",
+  "chapter": "Chapter 1: Neovim Core Navigation",
+  "order": 8,
+  "title": "Split Compare",
+  "brief": "Use window splits to align values from one file into another.",
+  "objectives": [
+    "Compare local.env and expected.env.",
+    "Set API_URL and RETRIES to expected values in local.env.",
+    "Save and check."
+  ],
+  "start_file": "local.env",
+  "tips_file": "TIPS.md",
+  "hints": [
+    "Open with nvim workspace/local.env.",
+    "Split compare with :vsplit workspace/expected.env.",
+    "Switch windows with Ctrl-w w.",
+    "Save local.env then run ./stage check."
+  ],
+  "primary_path": [
+    "Open `nvim workspace/local.env`.",
+    "Create vertical split: `:vsplit workspace/expected.env`.",
+    "Move between windows with `<C-w>w`, then update `local.env` values.",
+    "Save with `:w`, then run `./stage check`."
+  ],
+  "fallback_path": [
+    "Buffer fallback: open expected with `:e workspace/expected.env`, toggle back with `:b#`.",
+    "Use `/API_URL` and `/RETRIES` searches to land on exact lines quickly."
+  ],
+  "why_path": "Splits reduce context switching cost when you need to compare two files line-by-line.",
+  "nvim_reference": [
+    "vertical split: `:vsplit workspace/expected.env`",
+    "switch windows: `<C-w>w`",
+    "directional window jump: `<C-w>h` / `<C-w>l`",
+    "search token: `/API_URL` and `/RETRIES`",
+    "change word: `ciw`",
+    "save file: `:w`"
+  ],
+  "tmux_reference": [
+    "switch pane: `Ctrl-b` then arrow keys",
+    "detach session: `Ctrl-b d`",
+    "exit stage session: `./stage quit`"
+  ],
+  "pro_move": "Prefer splits when two files must be visually compared during edits.",
+  "checks": [
+    {
+      "type": "file_contains",
+      "path": "local.env",
+      "value": "API_URL=https://api.nv.local"
+    },
+    {
+      "type": "file_contains",
+      "path": "local.env",
+      "value": "RETRIES=5"
+    },
+    {
+      "type": "file_not_contains",
+      "path": "local.env",
+      "value": "API_URL=http://localhost:3000"
+    },
+    {
+      "type": "file_not_contains",
+      "path": "local.env",
+      "value": "RETRIES=1"
+    }
+  ]
+}

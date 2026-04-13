@@ -1,0 +1,53 @@
+{
+  "id": "M01-05",
+  "chapter": "Chapter 1: Neovim Core Navigation",
+  "order": 5,
+  "title": "Chapter Checkpoint",
+  "brief": "Make a tiny Python test pass by editing one function.",
+  "objectives": [
+    "Edit app.py so test_app.py passes.",
+    "Run python3 test_app.py in the mission workspace.",
+    "Save and check."
+  ],
+  "start_file": "app.py",
+  "tips_file": "TIPS.md",
+  "hints": [
+    "Open with nvim workspace/app.py.",
+    "Open workspace/test_app.py too and read the exact expected string.",
+    "In app.py, make format_status return name + ': READY!' (uppercase READY and exclamation mark).",
+    "Run (from workspace/) python3 test_app.py, then run ./stage check."
+  ],
+  "primary_path": [
+    "Open `nvim workspace/app.py`.",
+    "Best compare flow: `:vsplit workspace/test_app.py`, move between windows with `<C-w>w`.",
+    "Fix return string to `: READY!`, save `:w`, run `(from workspace/) python3 test_app.py`, then `./stage check`."
+  ],
+  "fallback_path": [
+    "Buffer fallback: open test file once and use `:b#` to jump back and forth.",
+    "Tab fallback: `:tabedit workspace/test_app.py`, then `gt`/`gT` to switch tabs.",
+    "Use shell pane to rerun `python3 test_app.py` after every edit."
+  ],
+  "why_path": "The test file defines exact output; checking it first removes guesswork and speeds up the fix loop.",
+  "nvim_reference": [
+    "best compare workflow: `:vsplit workspace/test_app.py`",
+    "switch windows: `<C-w>w` or `<C-w>h/j/k/l`",
+    "buffer toggle: `:b#`",
+    "tab workflow: `:tabedit workspace/test_app.py`, then `gt` / `gT`",
+    "fallback open file: `:e workspace/test_app.py`",
+    "change word/text: `ciw` or `cw`",
+    "save file: `:w`"
+  ],
+  "tmux_reference": [
+    "switch pane: `Ctrl-b` then arrow keys",
+    "rerun command in shell pane: `python3 test_app.py`",
+    "exit stage session: `./stage quit`"
+  ],
+  "pro_move": "Keep one pane for editor and one pane for test reruns.",
+  "checks": [
+    {
+      "type": "command_exit_zero",
+      "path": ".",
+      "command": "python3 test_app.py"
+    }
+  ]
+}

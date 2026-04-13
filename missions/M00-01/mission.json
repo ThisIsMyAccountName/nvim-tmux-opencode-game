@@ -1,0 +1,58 @@
+{
+  "id": "M00-01",
+  "chapter": "Chapter 0: Warmup",
+  "order": 1,
+  "title": "First Movement",
+  "brief": "Open one file and replace a token using normal-mode navigation.",
+  "objectives": [
+    "Edit notes.txt in Neovim.",
+    "Replace navigation_ready with NAVIGATION_READY.",
+    "Save the file."
+  ],
+  "start_file": "notes.txt",
+  "tips_file": "TIPS.md",
+  "hints": [
+    "Open the file with nvim workspace/notes.txt.",
+    "Type /navigation_ready and press Enter to jump to the target word.",
+    "Best-fit command: on that word, type gUiw to uppercase the full word.",
+    "Fallback: use ciw, enter NAVIGATION_READY, then press Esc.",
+    "Save with :w, then run ./stage check."
+  ],
+  "primary_path": [
+    "Open `nvim workspace/notes.txt`.",
+    "Search the target with `/navigation_ready` and `Enter`.",
+    "Uppercase the word directly with `gUiw`.",
+    "Save with `:w`, then run `./stage check`."
+  ],
+  "fallback_path": [
+    "On the target word, use `ciw`, type `NAVIGATION_READY`, press `Esc`.",
+    "Save with `:w`, then run `./stage check`."
+  ],
+  "why_path": "`gUiw` matches the stage goal exactly (uppercase this word) with fewer keystrokes and less chance of typos.",
+  "nvim_reference": [
+    "move cursor: `h` `j` `k` `l`",
+    "search target: `/navigation_ready` then `Enter`",
+    "uppercase inner word: `gUiw`",
+    "fallback change word: `ciw`",
+    "leave insert mode: `Esc`",
+    "save file: `:w`"
+  ],
+  "tmux_reference": [
+    "switch pane: `Ctrl-b` then arrow keys",
+    "detach session: `Ctrl-b d`",
+    "exit stage session: `./stage quit`"
+  ],
+  "pro_move": "Search + change word is often faster than arrowing around.",
+  "checks": [
+    {
+      "type": "file_contains",
+      "path": "notes.txt",
+      "value": "NAVIGATION_READY"
+    },
+    {
+      "type": "file_not_contains",
+      "path": "notes.txt",
+      "value": "navigation_ready"
+    }
+  ]
+}

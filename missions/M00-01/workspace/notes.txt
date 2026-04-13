@@ -1,0 +1,5 @@
+NeoVim dojo startup note
+
+Mission token: navigation_ready
+
+When you finish this edit, save the file.

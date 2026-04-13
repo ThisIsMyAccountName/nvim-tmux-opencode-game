@@ -1,0 +1,75 @@
+{
+  "id": "M01-01",
+  "chapter": "Chapter 1: Neovim Core Navigation",
+  "order": 1,
+  "title": "Word Motion Cleanup",
+  "brief": "Fix a sentence with typos using word-based movement and edits.",
+  "objectives": [
+    "Fix all typos in paragraph.txt.",
+    "Expected words include Neovim, navigation, and tmux.",
+    "Save and check."
+  ],
+  "start_file": "paragraph.txt",
+  "tips_file": "TIPS.md",
+  "hints": [
+    "Open with nvim workspace/paragraph.txt.",
+    "Search each typo directly: /Neovm, /navgation, and /tmx.",
+    "On each typo, use ciw to replace the full word, then press Esc.",
+    "Save with :w and run ./stage check."
+  ],
+  "primary_path": [
+    "Open `nvim workspace/paragraph.txt`.",
+    "Search each typo with `/...` and use `ciw` to replace it.",
+    "Repeat for Neovm/navgation/tmx, save with `:w`, then `./stage check`."
+  ],
+  "fallback_path": [
+    "Use word motions (`w`/`b`) if search feels fast enough.",
+    "Fix one typo, save, and run `./stage check` to see remaining misses."
+  ],
+  "why_path": "Search + `ciw` targets the exact wrong word quickly and avoids slow cursor walking.",
+  "nvim_reference": [
+    "search typo: `/Neovm`, `/navgation`, `/tmx`",
+    "jump next match: `n`",
+    "change word: `ciw`",
+    "leave insert mode: `Esc`",
+    "save file: `:w`"
+  ],
+  "tmux_reference": [
+    "switch pane: `Ctrl-b` then arrow keys",
+    "detach session: `Ctrl-b d`",
+    "exit stage session: `./stage quit`"
+  ],
+  "pro_move": "ciw is a high-value edit for typo cleanup.",
+  "checks": [
+    {
+      "type": "file_not_contains",
+      "path": "paragraph.txt",
+      "value": "Neovm"
+    },
+    {
+      "type": "file_not_contains",
+      "path": "paragraph.txt",
+      "value": "navgation"
+    },
+    {
+      "type": "file_not_contains",
+      "path": "paragraph.txt",
+      "value": "tmx"
+    },
+    {
+      "type": "file_contains",
+      "path": "paragraph.txt",
+      "value": "Neovim"
+    },
+    {
+      "type": "file_contains",
+      "path": "paragraph.txt",
+      "value": "navigation"
+    },
+    {
+      "type": "file_contains",
+      "path": "paragraph.txt",
+      "value": "tmux"
+    }
+  ]
+}

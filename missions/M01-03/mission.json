@@ -1,0 +1,54 @@
+{
+  "id": "M01-03",
+  "chapter": "Chapter 1: Neovim Core Navigation",
+  "order": 3,
+  "title": "Top to Bottom",
+  "brief": "Jump through a longer file and fix a status near the bottom.",
+  "objectives": [
+    "Find status: BROKEN in longlog.txt.",
+    "Change it to status: GREEN.",
+    "Save and check."
+  ],
+  "start_file": "longlog.txt",
+  "tips_file": "TIPS.md",
+  "hints": [
+    "Open with nvim workspace/longlog.txt.",
+    "Fastest route: /BROKEN then Enter to jump directly to the target line.",
+    "On BROKEN, use ciwGREEN and press Esc.",
+    "Save with :w and run ./stage check."
+  ],
+  "primary_path": [
+    "Open `nvim workspace/longlog.txt`.",
+    "Jump straight to target with `/BROKEN`.",
+    "Use `ciwGREEN`, save with `:w`, then run `./stage check`."
+  ],
+  "fallback_path": [
+    "Use `G` to jump to bottom first, then `/BROKEN` if needed.",
+    "Use `cw` as fallback if `ciw` feels awkward."
+  ],
+  "why_path": "Search is more relevant than scrolling because the file is long and has one precise target token.",
+  "nvim_reference": [
+    "jump end/top: `G` and `gg`",
+    "search target: `/BROKEN`",
+    "change word: `ciw`",
+    "save file: `:w`"
+  ],
+  "tmux_reference": [
+    "switch pane: `Ctrl-b` then arrow keys",
+    "detach session: `Ctrl-b d`",
+    "exit stage session: `./stage quit`"
+  ],
+  "pro_move": "Search beats scrolling in almost every case.",
+  "checks": [
+    {
+      "type": "file_not_contains",
+      "path": "longlog.txt",
+      "value": "status: BROKEN"
+    },
+    {
+      "type": "file_contains",
+      "path": "longlog.txt",
+      "value": "status: GREEN"
+    }
+  ]
+}

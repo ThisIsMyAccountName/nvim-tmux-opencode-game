@@ -1,0 +1,3 @@
+I use Neovm for daily editing.
+Fast navgation helps me stay in flow.
+I pair it with tmx and a shell pane.
