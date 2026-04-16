@@ -6,7 +6,7 @@
   "brief": "Set a mark, jump to another line, and jump back to patch metadata.",
   "objectives": [
     "Set value to done in one place.",
-    "Update owner line near the top.",
+    "Change owner to nvim-team",
     "Use mark/jump style workflow and save."
   ],
   "start_file": "report.txt",
