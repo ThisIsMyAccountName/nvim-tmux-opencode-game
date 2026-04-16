@@ -24,7 +24,6 @@ Multi-Window Basics
 - `:vsplit <path_to_file>` - open a file in vertical split.
 - `<C-w>w` - switch between split windows.
 - `<C-w>h` / `<C-w>l` - move to left / right split.
-- `:only` - keep current window, close others.
 
 Stage commands
 - `./stage check` - run mission checks.
